@@ -1,0 +1,271 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Spotify Clone
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+  <div class="flex flex-col md:flex-row h-screen">
+   <!-- Sidebar -->
+   <div class="w-full md:w-64 bg-gray-800 p-6 md:block hidden" id="sidebar">
+    <div class="mb-8">
+     <h1 class="text-3xl font-bold text-green-500">
+      Spotify
+     </h1>
+    </div>
+    <nav class="space-y-4">
+     <a class="flex items-center text-gray-400 hover:text-white" href="#">
+      <i class="fas fa-home mr-3">
+      </i>
+      <span>
+       Home
+      </span>
+     </a>
+     <a class="flex items-center text-gray-400 hover:text-white" href="#">
+      <i class="fas fa-search mr-3">
+      </i>
+      <span>
+       Search
+      </span>
+     </a>
+     <a class="flex items-center text-gray-400 hover:text-white" href="#">
+      <i class="fas fa-bookmark mr-3">
+      </i>
+      <span>
+       Your Library
+      </span>
+     </a>
+     <a class="flex items-center text-gray-400 hover:text-white" href="#">
+      <i class="fas fa-plus-square mr-3">
+      </i>
+      <span>
+       Create Playlist
+      </span>
+     </a>
+     <a class="flex items-center text-gray-400 hover:text-white" href="#">
+      <i class="fas fa-heart mr-3">
+      </i>
+      <span>
+       Liked Songs
+      </span>
+     </a>
+    </nav>
+   </div>
+   <!-- Hamburger Button -->
+   <div class="md:hidden p-4">
+    <button class="text-gray-400 hover:text-white" id="hamburger-button">
+     <i class="fas fa-bars text-2xl" id="hamburger-icon">
+     </i>
+     <i class="fas fa-times text-2xl hidden" id="close-icon">
+     </i>
+    </button>
+   </div>
+   <!-- Main Content -->
+   <div class="flex-1 p-6 overflow-y-auto">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-6">
+     <div class="flex items-center space-x-4">
+      <button class="text-gray-400 hover:text-white">
+       <i class="fas fa-chevron-left">
+       </i>
+      </button>
+      <button class="text-gray-400 hover:text-white">
+       <i class="fas fa-chevron-right">
+       </i>
+      </button>
+     </div>
+     <div class="flex items-center space-x-4">
+      <button class="bg-gray-700 text-white px-4 py-2 rounded-full">
+       Upgrade
+      </button>
+      <div class="flex items-center space-x-2">
+       <img alt="User profile picture" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/r254185lVxIGBVlT4TN1GKgGvum1uSvjPrJWlSgnQBah9i7E.jpg" width="40"/>
+       <span class="text-white">
+        User Name
+       </span>
+      </div>
+     </div>
+    </div>
+    <!-- Playlists -->
+    <div>
+     <h2 class="text-2xl font-bold mb-4">
+      Good Evening
+     </h2>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+       <img alt="Album cover of Playlist 1" class="w-16 h-16 rounded" height="60" src="https://storage.googleapis.com/a1aa/image/U2JOLXZJ05YNElGqBYA3FuAjAar0DnV7GS6JD1Rcf1LI7F3JA.jpg" width="60"/>
+       <span>
+        Playlist 1
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+       <img alt="Album cover of Playlist 2" class="w-16 h-16 rounded" height="60" src="https://storage.googleapis.com/a1aa/image/L9GK7ODe3UQ6TKyIDnGQ71g2Kyf6Ms5poG6id7KNElgI2LuTA.jpg" width="60"/>
+       <span>
+        Playlist 2
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+       <img alt="Album cover of Playlist 3" class="w-16 h-16 rounded" height="60" src="https://storage.googleapis.com/a1aa/image/CZkMeeRUwbv6eIOUavLa2iBebK8lUwUcThioKKjktBxKZv4OB.jpg" width="60"/>
+       <span>
+        Playlist 3
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+       <img alt="Album cover of Playlist 4" class="w-16 h-16 rounded" height="60" src="https://storage.googleapis.com/a1aa/image/l1iiN5JGuRLEBVkrskROBelbZYohZIO6Wfe8WqC2w80nsXcnA.jpg" width="60"/>
+       <span>
+        Playlist 4
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+       <img alt="Album cover of Playlist 5" class="w-16 h-16 rounded" height="60" src="https://storage.googleapis.com/a1aa/image/ecPDQTYGYdRSEKzfKgsfC0VE1EYvYWsRRCYDFErvnHkFsXcnA.jpg" width="60"/>
+       <span>
+        Playlist 5
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+       <img alt="Album cover of Playlist 6" class="w-16 h-16 rounded" height="60" src="https://storage.googleapis.com/a1aa/image/zY32QXvMfX01U6FcRMBNlNy91DKGYOBiYSzbZaeV4GiL2LuTA.jpg" width="60"/>
+       <span>
+        Playlist 6
+       </span>
+      </div>
+     </div>
+    </div>
+    <!-- Recently Played -->
+    <div class="mt-8">
+     <h2 class="text-2xl font-bold mb-4">
+      Recently Played
+     </h2>
+     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="bg-gray-800 p-4 rounded-lg">
+       <img alt="Album cover of Recently Played 1" class="w-full h-32 rounded mb-2" height="150" src="https://storage.googleapis.com/a1aa/image/Gz80Aku3e8SxQSJiSgsf446IBHvbpVbhWE5YrMPUI1hM2LuTA.jpg" width="150"/>
+       <span>
+        Recently Played 1
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+       <img alt="Album cover of Recently Played 2" class="w-full h-32 rounded mb-2" height="150" src="https://storage.googleapis.com/a1aa/image/t8Zc5MdxQyq9ANKYkf7uYR72sshW9zUTYqaxnl6EUeQJ2LuTA.jpg" width="150"/>
+       <span>
+        Recently Played 2
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+       <img alt="Album cover of Recently Played 3" class="w-full h-32 rounded mb-2" height="150" src="https://storage.googleapis.com/a1aa/image/nIZXnrPxvsKeVqUeolVTAe1Ef1rctkas82Rj0SIb4A2QZv4OB.jpg" width="150"/>
+       <span>
+        Recently Played 3
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+       <img alt="Album cover of Recently Played 4" class="w-full h-32 rounded mb-2" height="150" src="https://storage.googleapis.com/a1aa/image/JahvV59N446ANVQzaREE3jAQSFvAAfPSe6Re6H6HcD2asXcnA.jpg" width="150"/>
+       <span>
+        Recently Played 4
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+       <img alt="Album cover of Recently Played 5" class="w-full h-32 rounded mb-2" height="150" src="https://storage.googleapis.com/a1aa/image/OCd4nwRtRfRZXi7rmMrrzX2l0fj86gfFMp4RjGHvU7DGsXcnA.jpg" width="150"/>
+       <span>
+        Recently Played 5
+       </span>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+       <img alt="Album cover of Recently Played 6" class="w-full h-32 rounded mb-2" height="150" src="https://storage.googleapis.com/a1aa/image/0SJ3VtHPyrLGI5L6S1GpwklZhBQUCGhteMZK5mclr9AD7F3JA.jpg" width="150"/>
+       <span>
+        Recently Played 6
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Footer Player -->
+  <div class="fixed bottom-0 left-0 right-0 bg-gray-800 p-4">
+   <div class="flex flex-col md:flex-row justify-between items-center">
+    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+     <img alt="Album cover of current song" class="w-16 h-16 rounded" height="60" src="https://storage.googleapis.com/a1aa/image/9GwaYgKToYJsPlvHh2G717fAC08qutQURh9j2E2GQZmH7F3JA.jpg" width="60"/>
+     <div>
+      <h3 class="text-white">
+       Current Song
+      </h3>
+      <p class="text-gray-400">
+       Artist Name
+      </p>
+     </div>
+    </div>
+    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+     <button class="text-gray-400 hover:text-white">
+      <i class="fas fa-random">
+      </i>
+     </button>
+     <button class="text-gray-400 hover:text-white">
+      <i class="fas fa-step-backward">
+      </i>
+     </button>
+     <button class="text-gray-400 hover:text-white">
+      <i class="fas fa-play-circle text-3xl">
+      </i>
+     </button>
+     <button class="text-gray-400 hover:text-white">
+      <i class="fas fa-step-forward">
+      </i>
+     </button>
+     <button class="text-gray-400 hover:text-white">
+      <i class="fas fa-redo">
+      </i>
+     </button>
+    </div>
+    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+     <span class="text-gray-400">
+      0:00
+     </span>
+     <div class="w-64 bg-gray-700 h-1 rounded-full">
+      <div class="bg-green-500 h-1 rounded-full" style="width: 30%;">
+      </div>
+     </div>
+     <span class="text-gray-400">
+      3:45
+     </span>
+    </div>
+    <div class="flex items-center space-x-4">
+     <button class="text-gray-400 hover:text-white">
+      <i class="fas fa-volume-down">
+      </i>
+     </button>
+     <div class="w-24 bg-gray-700 h-1 rounded-full">
+      <div class="bg-green-500 h-1 rounded-full" style="width: 50%;">
+      </div>
+     </div>
+     <button class="text-gray-400 hover:text-white">
+      <i class="fas fa-volume-up">
+      </i>
+     </button>
+    </div>
+   </div>
+  </div>
+  <script>
+   document.getElementById('hamburger-button').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebar');
+        var hamburgerIcon = document.getElementById('hamburger-icon');
+        var closeIcon = document.getElementById('close-icon');
+        if (sidebar.classList.contains('hidden')) {
+            sidebar.classList.remove('hidden');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+        } else {
+            sidebar.classList.add('hidden');
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+    });
+  </script>
+ </body>
+</html>
